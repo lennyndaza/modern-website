@@ -115,6 +115,18 @@ function cycleWord()
 typedTextEl.style.transition = 'opacity 0.4s ease';
 setInterval(cycleWord, 3200);
 
+// ---------- EmailJS config ----------
+// Sign up at https://www.emailjs.com, then replace these three values with
+// your own Public Key, Service ID, and Template ID from the EmailJS dashboard.
+const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+
+if (window.emailjs)
+{
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+}
+
 // ---------- Contact form validation & submit ----------
 const form = document.getElementById('contactForm');
 const submitBtn = document.getElementById('submitBtn');
@@ -184,18 +196,9 @@ form.addEventListener('submit', (e) =>
   submitBtn.disabled = true;
   formStatus.textContent = '';
 
-  const payload = Object.fromEntries(new FormData(form).entries());
-
-  fetch('/api/contact', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload),
-  })
-    .then(async (res) =>
+  emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form)
+    .then(() =>
     {
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data.error || 'Request failed');
-
       localStorage.setItem(LAST_SUBMIT_KEY, String(Date.now()));
       formStatus.textContent = "Thanks! Your message has been sent — we'll be in touch soon.";
       formStatus.classList.remove('error');
@@ -205,8 +208,8 @@ form.addEventListener('submit', (e) =>
     })
     .catch((err) =>
     {
-      console.error('Contact form error:', err);
-      formStatus.textContent = err.message || 'Something went wrong sending your message. Please try again or email us directly.';
+      console.error('EmailJS error:', err);
+      formStatus.textContent = "Something went wrong sending your message. Please try again or email us directly.";
       formStatus.classList.remove('success');
       formStatus.classList.add('error');
     })
