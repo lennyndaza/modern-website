@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nova — Digital Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="#home" class="logo">Nova<span>.</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-small nav-cta">Let's Talk</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="container hero-content">
+      <p class="eyebrow reveal">Design &middot; Development &middot; Strategy</p>
+      <h1 class="reveal">
+        We craft <span class="gradient-text" id="typedText">digital experiences</span><br>
+        that move people.
+      </h1>
+      <p class="hero-sub reveal">
+        Nova is a small studio building bold websites, brands, and products
+        for teams who refuse to blend in.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#contact" class="btn btn-primary">Start a project</a>
+        <a href="#work" class="btn btn-ghost">See our work</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <span class="stat-num" data-count="120">0</span>
+          <span class="stat-label">Projects shipped</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="98">0</span>
+          <span class="stat-label">% client satisfaction</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="15">0</span>
+          <span class="stat-label">Countries reached</span>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+      <span></span>
+    </a>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">About Us</p>
+        <h2>We're a studio obsessed with the details others skip.</h2>
+      </div>
+      <div class="about-grid">
+        <p class="about-text reveal">
+          Founded by designers and engineers who got tired of average work,
+          Nova blends sharp visual design with clean, performant code.
+          Every project starts with a question: what would make someone stop scrolling?
+          We answer it with motion, typography, and interfaces that feel alive.
+        </p>
+        <div class="about-cards">
+          <div class="mini-card reveal">
+            <div class="mini-icon">🎯</div>
+            <h3>Purpose-built</h3>
+            <p>No templates. Every pixel earns its place.</p>
+          </div>
+          <div class="mini-card reveal">
+            <div class="mini-icon">⚡</div>
+            <h3>Fast by default</h3>
+            <p>Performance and accessibility are non-negotiable.</p>
+          </div>
+          <div class="mini-card reveal">
+            <div class="mini-icon">🤝</div>
+            <h3>True partners</h3>
+            <p>We work like an embedded part of your team.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">What We Do</p>
+        <h2>Services built to scale with you.</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <span class="service-num">01</span>
+          <h3>Brand & Identity</h3>
+          <p>Logos, systems, and voice that make you instantly recognizable.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-num">02</span>
+          <h3>Web Design</h3>
+          <p>Interfaces engineered for clarity, speed, and conversion.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-num">03</span>
+          <h3>Development</h3>
+          <p>Clean, scalable front-end and back-end builds, done right.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-num">04</span>
+          <h3>Product Strategy</h3>
+          <p>Research and positioning that de-risk your next big move.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="work" id="work">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Selected Work</p>
+        <h2>A few things we're proud of.</h2>
+      </div>
+      <div class="work-grid">
+        <div class="work-card reveal" style="--accent:#7c5cff">
+          <div class="work-thumb">Aurora</div>
+          <div class="work-info">
+            <h3>Aurora Finance</h3>
+            <p>Fintech dashboard & brand refresh</p>
+          </div>
+        </div>
+        <div class="work-card reveal" style="--accent:#38d9c9">
+          <div class="work-thumb">Lumen</div>
+          <div class="work-info">
+            <h3>Lumen Studio</h3>
+            <p>Portfolio site for a design collective</p>
+          </div>
+        </div>
+        <div class="work-card reveal" style="--accent:#ff7a5c">
+          <div class="work-thumb">Orbit</div>
+          <div class="work-info">
+            <h3>Orbit Health</h3>
+            <p>Wellness app landing experience</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-intro reveal">
+        <p class="eyebrow">Get In Touch</p>
+        <h2>Let's build something great together.</h2>
+        <p class="contact-sub">
+          Tell us about your project and we'll get back to you within one business day.
+        </p>
+        <ul class="contact-list">
+          <li><span>📍</span> Remote &middot; Worldwide</li>
+          <li><span>✉️</span> hello@novastudio.example</li>
+          <li><span>📞</span> +1 (555) 012-3456</li>
+        </ul>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="hp-field" aria-hidden="true">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder=" " required minlength="2">
+            <label for="name">Full name</label>
+            <span class="error-msg" data-for="name">Please enter your name (2+ characters).</span>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder=" " required>
+            <label for="email">Email address</label>
+            <span class="error-msg" data-for="email">Please enter a valid email.</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="subject" name="subject" placeholder=" " required minlength="3">
+          <label for="subject">Subject</label>
+          <span class="error-msg" data-for="subject">Please enter a subject.</span>
+        </div>
+
+        <div class="form-group">
+          <textarea id="message" name="message" placeholder=" " required minlength="10" rows="5"></textarea>
+          <label for="message">Your message</label>
+          <span class="error-msg" data-for="message">Message should be at least 10 characters.</span>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+          <span class="btn-text">Send message</span>
+          <span class="btn-spinner"></span>
+        </button>
+
+        <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a href="#home" class="logo">Nova<span>.</span></a>
+    <p>&copy; <span id="year"></span> Nova Studio. All rights reserved.</p>
+    <a href="#home" class="back-to-top" aria-label="Back to top">↑</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
